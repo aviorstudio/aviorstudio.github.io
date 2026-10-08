@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "profile": "configuration",
+  "commands": {
+    "install": [
+      "make",
+      "install"
+    ],
+    "lint": [
+      "make",
+      "lint"
+    ],
+    "build": [
+      "make",
+      "build"
+    ],
+    "check": [
+      "make",
+      "check"
+    ],
+    "clean": [
+      "make",
+      "clean"
+    ],
+    "test": {
+      "unsupported": "Static redirect configuration has no application test suite or persistent development service; lint validates all redirect mechanisms."
+    },
+    "dev": {
+      "unsupported": "Static redirect configuration has no application test suite or persistent development service; lint validates all redirect mechanisms."
+    },
+    "stop": {
+      "unsupported": "Static redirect configuration has no application test suite or persistent development service; lint validates all redirect mechanisms."
+    }
+  }
+}
