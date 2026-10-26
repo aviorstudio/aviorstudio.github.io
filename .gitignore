@@ -1,2 +1,6 @@
 .artifacts/
 __pycache__/
+
+.komizo.mise*.toml
+
+.komizo.mise*.lock
