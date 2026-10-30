@@ -1,0 +1,25 @@
+[tools]
+"python" = "3.13.11"
+"actionlint" = "1.7.12"
+
+[env]
+TOOLS_ROOT = "{{ get_env(name='TOOLS_ROOT', default=config_root ~ '/.ci-tools') }}"
+GOTOOLCHAIN = "local"
+PYTHONDONTWRITEBYTECODE = "1"
+
+[tasks."lint"]
+run = ["python3 scripts/check.py", "actionlint"]
+
+[tasks."build"]
+run = "python3 \"$TOOLS_ROOT/helpers/verification.py\" build --name build --artifact .artifacts/dist -- mise run _build"
+
+[tasks."_build"]
+run = ["python3 scripts/check.py --build"]
+hide = true
+
+[tasks."_check-stages"]
+run = [{"task" = "lint"}, {"task" = "build"}]
+hide = true
+
+[tasks."check"]
+run = [{"task" = "lint"}, {"task" = "build"}]
