@@ -1,4 +1,4 @@
-<!-- Generated from private documentation source. Do not edit directly. Source SHA256: d31ab1b43185c1f1c5090c763313e3290c3a8f92e76c0ee517bb0229d036beec -->
+<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 5ddd7d4887dd1186520a6ea5ff043f91fc4d63e560b78e3f2282b0ce3fe4ed68 -->
 
 # aviorstudio.github.io
 
@@ -18,3 +18,7 @@ mise run check
 ```
 
 Native build and test commands retain source and output checks, with receipts in `.artifacts/verification`. Existing product release rules and artifacts remain owned by this repository. End users install the product’s published distribution.
+
+## Contributor task interface
+
+Contributor tool versions and task entry points live in the native Mise configuration. Use `mise run lint` for source checks, `mise run test` for the applicable behavioral tests, and `mise run check` for the complete supported gate. `mise run clean` removes declared generated outputs while preserving source, credentials and retained data. This package has no application development service.
